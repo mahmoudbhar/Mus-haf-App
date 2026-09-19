@@ -136,6 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let verses = quranData[page] || quranData[String(page)];
 
     if (verses && Array.isArray(verses) && verses.length > 0) {
+      // التحقق مما إذا كانت الصفحة تبدأ ببداية سورة (باستثناء سورة التوبة رقم 9)
+      let firstVerse = verses[0];
+      if (firstVerse.verse === 1 && firstVerse.chapter !== 9) {
+        let bismillahDiv = document.createElement('div');
+        bismillahDiv.className = 'bismillah-banner';
+        bismillahDiv.textContent = 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ';
+        pageDiv.appendChild(bismillahDiv);
+      }
+
       verses.forEach(v => {
         let span = document.createElement('span');
         span.className = 'ayah';
