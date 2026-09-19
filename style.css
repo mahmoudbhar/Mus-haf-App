@@ -8,7 +8,16 @@
   --card-bg: #ffffff;
   --mask-bg: #2c3e50;
 }
-
+.bismillah-banner {
+  text-align: center;
+  font-family: 'Amiri Quran', serif;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border-color);
+  color: var(--primary-color);
+  display: block;
+}
 body.dark-theme {
   --bg-color: #071913;
   --header-bg: #0d3b2e;
