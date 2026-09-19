@@ -55,9 +55,7 @@ body {
   border-bottom: 2px solid var(--border-color);
   flex-wrap: wrap;
   gap: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: static; /* تم تغييرها لتتحرك مع التمرير */
 }
 
 .brand h1 {
@@ -115,9 +113,7 @@ body {
   border-bottom: 1px solid var(--border-color);
   flex-wrap: wrap;
   gap: 10px;
-  position: sticky;
-  top: 73px; /* تحت الهيدر مباشرة */
-  z-index: 99;
+  position: static; /* أُزيلت خاصية الثبات لتتحرك مع الصفحة */
 }
 
 .action-buttons {
@@ -133,9 +129,7 @@ body {
   width: 100%;
   height: 6px;
   background: var(--border-color);
-  position: sticky;
-  top: 130px;
-  z-index: 98;
+  position: static; /* أُزيلت خاصية الثبات */
 }
 
 .progress-bar {
@@ -190,7 +184,7 @@ body {
   border-bottom: 2px solid #c0392b;
 }
 
-/* التعديل لجعل شريط التنقل السفلي ثابتاً (Fixed) في أسفل الشاشة دائماً */
+/* شريط التنقل السفلي يبقى ثابتاً في أسفل الشاشة */
 .navigation-footer {
   background: var(--header-bg);
   padding: 12px 20px;
