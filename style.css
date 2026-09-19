@@ -8,6 +8,7 @@
   --card-bg: #ffffff;
   --mask-bg: #2c3e50;
 }
+
 .bismillah-banner {
   text-align: center;
   font-family: 'Amiri Quran', serif;
@@ -18,6 +19,7 @@
   color: var(--primary-color);
   display: block;
 }
+
 body.dark-theme {
   --bg-color: #071913;
   --header-bg: #0d3b2e;
@@ -43,7 +45,6 @@ body {
   display: flex;
   flex-direction: column;
   transition: background 0.3s, color 0.3s;
-  padding-bottom: 70px; /* مسافة إضافية أسفل الصفحة لكي لا يغطي الشريط محتوى المصحف */
 }
 
 .app-header {
@@ -55,7 +56,7 @@ body {
   border-bottom: 2px solid var(--border-color);
   flex-wrap: wrap;
   gap: 10px;
-  position: static; /* تم تغييرها لتتحرك مع التمرير */
+  position: static;
 }
 
 .brand h1 {
@@ -113,7 +114,7 @@ body {
   border-bottom: 1px solid var(--border-color);
   flex-wrap: wrap;
   gap: 10px;
-  position: static; /* أُزيلت خاصية الثبات لتتحرك مع الصفحة */
+  position: static;
 }
 
 .action-buttons {
@@ -129,7 +130,7 @@ body {
   width: 100%;
   height: 6px;
   background: var(--border-color);
-  position: static; /* أُزيلت خاصية الثبات */
+  position: static;
 }
 
 .progress-bar {
@@ -171,7 +172,6 @@ body {
   background: rgba(46, 204, 113, 0.15);
 }
 
-/* تنسيق إخفاء الكلمات لاختبار الحفظ */
 .ayah.masked {
   color: transparent !important;
   text-shadow: 0 0 10px var(--text-color);
@@ -184,7 +184,7 @@ body {
   border-bottom: 2px solid #c0392b;
 }
 
-/* شريط التنقل السفلي يبقى ثابتاً في أسفل الشاشة */
+/* شريط التنقل السفلي أصبح عادياً وغير مثبت */
 .navigation-footer {
   background: var(--header-bg);
   padding: 12px 20px;
@@ -192,12 +192,10 @@ body {
   justify-content: space-between;
   align-items: center;
   border-top: 2px solid var(--border-color);
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: static;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
 }
 
 .nav-btn {
